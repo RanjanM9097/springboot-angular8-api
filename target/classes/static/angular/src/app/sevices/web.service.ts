@@ -8,7 +8,7 @@ export class WebService {
 
     constructor(private httpClient: HttpClient) { }
 
-    serverUrl: string = "http://localhost:8080/api/"
+    serverUrl: string = "http://localhost:3031/api/"
 
     get(url: string): Observable<any> {
         return this.httpClient.get(this.serverUrl + url);

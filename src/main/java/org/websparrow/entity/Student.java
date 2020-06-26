@@ -19,8 +19,17 @@ public class Student implements Serializable {
 	private String firstName;
 	private String lastName;
 	private String email;
+    private long    mobno;
+    
+    public long getMobno() {
+		return mobno;
+	}
 
-// Generate Getters and Setters...
+	public void setMobno(long mobno) {
+		this.mobno = mobno;
+	}
+
+	// Generate Getters and Setters...
 	public int getId() {
 		return id;
 	}

@@ -15,7 +15,7 @@ export class StudentViewComponent implements OnInit {
     this.getData();
   }
   url: string = 'student';
-  title = 'Spring Boot + Angular 8 CRUD Example';
+  title = 'Student ';
   usersList: Array<Student>
   student: Student = undefined
   myForm: FormGroup;
@@ -27,7 +27,8 @@ export class StudentViewComponent implements OnInit {
     this.myForm = this.formBuilder.group({
       firstName: new FormControl(this.student ? this.student.firstName : '', Validators.required),
       lastName: new FormControl(this.student ? this.student.lastName : '', Validators.required),
-      email: new FormControl(this.student ? this.student.email : '', Validators.required)
+      email: new FormControl(this.student ? this.student.email : '', Validators.required),
+      mobno: new FormControl(this.student ? this.student.mobno : '', Validators.required)
     });
   }
   private submitForm(data: FormGroup) {
@@ -59,6 +60,7 @@ export class StudentViewComponent implements OnInit {
     this.myForm.controls['firstName'].setValue(this.student.firstName)
     this.myForm.controls['lastName'].setValue(this.student.lastName)
     this.myForm.controls['email'].setValue(this.student.email)
+    this.myForm.controls['mobno'].setValue(this.student.mobno)
   }
 
   delete(student: Student): void {

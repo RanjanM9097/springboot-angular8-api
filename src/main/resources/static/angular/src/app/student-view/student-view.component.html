@@ -21,6 +21,11 @@
                         formControlName="email">
                 </div>
                 <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInputGroup">MobNo</label>
+                    <input type="text" class="form-control" id="inlineFormInput" placeholder="MobNo"
+                        formControlName="mobno">
+                </div>
+                <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-2" [disabled]="!myForm.valid">Save</button>
                 </div>
             </div>
@@ -34,6 +39,7 @@
                     <th scope="col">First</th>
                     <th scope="col">Last</th>
                     <th scope="col">Email</th>
+                    <th scope="col">MobNo</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -43,6 +49,7 @@
                     <td>{{student.firstName}}</td>
                     <td>{{student.lastName}}</td>
                     <td>{{student.email}}</td>
+                    <td>{{student.mobno}}</td>
                     <td>
                         <span style="margin-right: 10px"><button (click)="edit(student)"
                                 class="btn btn-primary mb-2">Edit</button> </span>
